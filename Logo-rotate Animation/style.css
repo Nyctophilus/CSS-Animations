@@ -29,7 +29,9 @@ body {
   width: 250px;
   height: 250px;
   background: url(https://avatars.githubusercontent.com/u/92796091?s=400&u=22ae351a543033bd31e06c5c1e74d3f79183e28a&v=4);
-
+  -moz-box-shadow: inset 0px 0px 6px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: inset 0px 0px 6px 6px rgba(255, 255, 255, 1);
+  box-shadow: inset 0px 0px 6px 6px rgba(255, 255, 255, 1);
   background-size: cover;
   border-radius: 50%;
   -webkit-border-radius: 50%;
