@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.content {
+  position: relative;
+}
+.content h2 {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  font-size: 8em;
+}
+.content h2:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #03a9f4;
+}
+.content h2:nth-child(2) {
+  color: #03a9f4;
+  animation: water 4s ease-in-out infinite;
+}
+
+@keyframes water {
+  0%,
+  100% {
+    clip-path: polygon(
+      1% 45%,
+      17% 45%,
+      31% 51%,
+      49% 59%,
+      65% 60%,
+      80% 56%,
+      100% 48%,
+      99% 99%,
+      0% 99%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 63%,
+      20% 67%,
+      37% 67%,
+      52% 63%,
+      67% 54%,
+      82% 48%,
+      100% 50%,
+      100% 100%,
+      0 100%
+    );
+  }
+}
