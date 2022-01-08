@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
+.flex-cen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: relative;
+}
+.card span {
+  position: absolute;
+  top: 0;
+  left: -115px;
+  width: 250px;
+  height: 250px;
+  display: block;
+  background-color: black;
+  transform-origin: 125px 0;
+  transform: rotate(calc(90deg * var(--i)));
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transform: rotate(calc(90deg * var(--i)));
+  -moz-transform: rotate(calc(90deg * var(--i)));
+  -ms-transform: rotate(calc(90deg * var(--i)));
+  -o-transform: rotate(calc(90deg * var(--i)));
+  filter: blur(80px);
+  -webkit-filter: blur(80px);
+  opacity: 0.8;
+}
+.spin {
+  animation: spin 5s infinite linear;
+  -webkit-animation: spin 5s infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
+.card span:first-child {
+  background: #01b2fe;
+}
+.card span:nth-child(2) {
+  background: #ff008c;
+}
+.card span:nth-child(3) {
+  background: #ffcd00;
+}
+.card span:last-of-type {
+  background: #00c456;
+}
+.card .glass {
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.card .glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+  transform: skewX(345deg);
+  -webkit-transform: skewX(345deg);
+  -moz-transform: skewX(345deg);
+  -ms-transform: skewX(345deg);
+  -o-transform: skewX(345deg);
+}
+.card .glass h2 {
+  padding: 20px;
+  font-weight: 400;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #333;
+  text-align: end;
+  font-style: italic;
+}
+.card .glass h2 i {
+  font-weight: 300;
+  font-size: 0.75em;
+  opacity: 0.6;
+  font-style: normal;
+}
