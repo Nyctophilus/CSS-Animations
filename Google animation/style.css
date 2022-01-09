@@ -1,0 +1,111 @@
+.app {
+  height: 200px;
+  width: 400px;
+  margin: 20% auto;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20% /50%;
+  -webkit-border-radius: 20% /50%;
+  -moz-border-radius: 20% /50%;
+  -ms-border-radius: 20% /50%;
+  -o-border-radius: 20% /50%;
+}
+
+.content {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #eee;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+.content span:nth-child(1),
+span:nth-child(4) {
+  color: #008cff;
+}
+.content span:nth-child(2),
+span:nth-child(6) {
+  color: red;
+}
+.content span:nth-child(3) {
+  color: #f7bd1f;
+}
+.content span:nth-child(5) {
+  color: #13b15a;
+}
+
+@keyframes retet {
+  to {
+    transform: rotateZ(360deg);
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+  }
+}
+
+.colors {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  position: absolute;
+  z-index: -2;
+  animation: retet 6s linear infinite;
+  -webkit-animation: retet 6s linear infinite;
+}
+
+.color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.blue1 {
+  clip-path: polygon(0% 0%, 50% 0%, 50% 50%);
+  background-color: #008cff;
+}
+.blue2 {
+  clip-path: polygon(50% 50%, 100% 100%, 50% 100%);
+  background-color: #008cff;
+}
+.red1 {
+  clip-path: polygon(100% 0%, 50% 50%, 100% 50%);
+  background-color: red;
+}
+.red2 {
+  clip-path: polygon(0% 50%, 50% 50%, 0% 100%);
+  background-color: red;
+}
+.green1 {
+  clip-path: polygon(0% 0%, 50% 50%, 0% 50%);
+
+  background-color: #13b15a;
+}
+.green2 {
+  clip-path: polygon(100% 50%, 50% 50%, 100% 100%);
+
+  background-color: #13b15a;
+}
+.yellow1 {
+  clip-path: polygon(50% 0%, 50% 50%, 100% 0%);
+
+  background-color: #f7bd1f;
+}
+.yellow2 {
+  clip-path: polygon(0% 100%, 50% 50%, 50% 100%);
+
+  background-color: #f7bd1f;
+}
